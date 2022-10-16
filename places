@@ -1,14 +1,17 @@
 ;;; -*- coding: utf-8; mode: lisp-data -*-
-(("/Users/igaves/Documents/my-daliy-notes/learn-emacs" . 144)
+(("/Users/igaves/Documents/my-daliy-notes/inbox.org" . 202)
+ ("/Users/igaves/.emacs.d/bookmarks" . 251)
  ("/Users/igaves/Documents/my-daliy-notes/"
-  (dired-filename . "/Users/igaves/Documents/my-daliy-notes/小爱同学联想到的.txt"))
- ("/Users/igaves/Documents/my-daliy-notes/小爱同学联想到的.txt" . 780)
- ("/Users/igaves/.emacs.d/elpa/writeroom-mode-20220426.2046/writeroom-mode-autoloads.el" . 2314)
- ("/Users/igaves/.emacs.d/elpa/visual-fill-column-20220519.1959/visual-fill-column-autoloads.el" . 2813)
- ("/Users/igaves/.emacs.d/init.el" . 693)
- ("/Users/igaves/Documents/my-daliy-notes/7月26日一顿瞎写.md" . 149)
+  (dired-filename . "/Users/igaves/Documents/my-daliy-notes/articles"))
+ ("/Users/igaves/Documents/my-daliy-notes/articles/"
+  (dired-filename . "/Users/igaves/Documents/my-daliy-notes/articles/.DS_Store"))
+ ("/Users/igaves/.emacs.d/init.el" . 2460)
+ ("/Users/igaves/.emacs.d/"
+  (dired-filename . "/Users/igaves/.emacs.d/init.el"))
  ("/Users/igaves/Documents/"
   (dired-filename . "/Users/igaves/Documents/my-daliy-notes"))
+ ("/Users/igaves/.emacs.d/elpa/writeroom-mode-20220426.2046/writeroom-mode-autoloads.el" . 2314)
+ ("/Users/igaves/.emacs.d/elpa/visual-fill-column-20220519.1959/visual-fill-column-autoloads.el" . 2813)
  ("/Users/igaves/.emacs.d/elpa/use-package-20210207.1926/use-package-autoloads.el" . 8214)
  ("/Users/igaves/.emacs.d/elpa/bind-key-20210210.1609/bind-key-autoloads.el" . 2596)
  ("/Users/igaves/.emacs.d/elpa/magit-20220706.148/magit-autoloads.el" . 88453)
@@ -18,8 +21,6 @@
  ("/Users/igaves/.emacs.d/elpa/transient-20220717.1713/transient-autoloads.el" . 2894)
  ("/Users/igaves/.emacs.d/elpa/with-editor-20220608.1017/with-editor-autoloads.el" . 3965)
  ("/Users/igaves/.emacs.d/elpa/compat-28.1.2.0/compat-autoloads.el" . 778)
- ("/Users/igaves/Documents/my-daliy-notes/srilanka-有机农业思辨.md" . 446)
- ("/Users/igaves/Documents/my-daliy-notes/讲好一个故事.txt" . 184)
  ("/Users/igaves/.emacs.d/elpa/gruvbox-theme-1.26.0/gruvbox-theme-autoloads.el" . 2822)
  ("/Users/igaves/.emacs.d/elpa/autothemer-0.2.3/autothemer-autoloads.el" . 1163)
  ("/Users/igaves/.emacs.d/elpa/dash-2.19.1/dash-autoloads.el" . 2886)

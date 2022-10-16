@@ -5,6 +5,58 @@
 (setq inhibit-startup-message t)             ; 关闭启动 Emacs 时的欢迎界面
 
 (add-hook 'prog-mode-hook #'hs-minor-mode)   ; 编程模式下，可以折叠代码块
+(add-hook 'dired-mode-hook 'auto-revert-mode) ; 创建文件后，自动刷新
+(setq truncate-lines nil) ; 自动折行
+
+(add-to-list 'auto-mode-alist  '("\\.org\\'" . org-mode)) ; 自动打开org-mode
+
+(setq org-use-fast-todo-selection t) ; task 设置
+(setq org-todo-keywords '((sequence "TODO(t)" "DOING(i)" "|" "DONE(d)" "ABORT(a)"))) ;task 设置
+(setq org-todo-keyword-faces '(("TODO" . "red")
+                               ("DOING" . "yellow")
+                               ("DONE" . "green")))  ; 颜色调整一下
+
+;;;;;;;;;;; caputure
+
+(setq org-directory "~/Documents/my-daliy-notes") ; org 目录
+
+(setq org-capture-templates nil)
+
+
+(define-key global-map (kbd "C-c c") 'org-capture)
+
+(add-to-list 'org-capture-templates
+             '("n" "Notes" entry (file "~/Documents/my-daliy-notes/daliy-notes.org")
+               "* %U - %^{heading}\n  %?"))
+(add-to-list 'org-capture-templates
+             '("b" "Book in Reading" entry (file "~/Documents/my-daliy-notes/daliy-notes.org")
+               "* %U - 《%^{书}》笔记\n  %?"))
+
+(add-to-list 'org-capture-templates
+             '("i" "Inbox" entry (file "~/Documents/my-daliy-notes/inbox.org")
+               "* %U - %^{来源}\n  %?"))
+
+;;;;;;;;;
+
+(let ((backup-dir "~/tmp/emacs/backups")
+      (auto-saves-dir "~/tmp/emacs/auto-saves/"))
+  (dolist (dir (list backup-dir auto-saves-dir))
+    (when (not (file-directory-p dir))
+      (make-directory dir t)))
+  (setq backup-directory-alist `(("." . ,backup-dir))
+        auto-save-file-name-transforms `((".*" ,auto-saves-dir t))
+        auto-save-list-file-prefix (concat auto-saves-dir ".saves-")
+        tramp-backup-directory-alist `((".*" . ,backup-dir))
+        tramp-auto-save-directory auto-saves-dir))
+
+(setq backup-by-copying t    ; Don't delink hardlinks                           
+      delete-old-versions t  ; Clean up the backups                             
+      version-control t      ; Use version numbers on backups,                  
+      kept-new-versions 5    ; keep some new versions                           
+      kept-old-versions 2)   ; and some old ones, too
+
+
+;;;;;;;;;;;;
 
 (when (display-graphic-p) (tool-bar-mode -1))                           ; 关闭 Tool bar
 (when (display-graphic-p) (toggle-scroll-bar -1)) ; 图形界面时关闭滚动条
